@@ -10,5 +10,5 @@ function printLetterByLetter(destination, message, speed) {
 }
 
 setInterval(function () {
-    printLetterByLetter("filler", "A Space is A Space ", 50);
-}, 1100);
+    printLetterByLetter("filler", "A Space is A Space ", 10);
+}, 300);
