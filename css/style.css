@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Happy Times";
+    src: url("/fonts/happy-times-at-the-ikob-webfont.woff2") format("woff2"),
+         url("/fonts/happy-times-at-the-ikob-webfont.woff") format("woff");
+  }
+
+@font-face{
+    font-family: "Happy Times";
+    src: url("/fonts/happy-times-at-the-ikob_italic-webfont.woff2") format("woff2"),
+         url("/fonts/happy-times-at-the-ikob_italic-webfont.woff") format("woff");
+    font-style: italic;
+}
+
+html, body{
+    font-family: 'Happy Times', 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+h1{
+    font-size: 10vw;
+    transform: scale(1, 3);
+}
+
+h2{
+    font-size: 3vw;
+    transform: skew(-2deg, -6deg) scale(1,2);
+    margin: 0;
+}
+h2 a{
+    transition: all 0.5s linear;
+    color: rgba(255,255,255,0);
+    text-shadow: 1px 4px 6px #979797;
+    text-decoration: none;
+}
+h2 a:hover{
+    color: #fff;
+    transform: skew(0deg, 0deg) scale(1,3);
+}
+
+p{
+    font-size: 4vw;
+    margin-bottom: 10px;
+}
+
+.rooms{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    color: #fff;
+    perspective: 2800px;
+}
+
+
+.room{
+    margin: 10px;
+    width: 40vw;
+    height: 30vw;
+    background: grey;
+    font-size: 3vw;
+    cursor: pointer;
+    border: inset 12px;
+}
+
+.rooms a{
+    display: block;
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);
+    transform: rotateX(60deg);
+    box-shadow: inset 0 0 1em rgba(0,0,0,0), 0px 30px 20px teal;
+    transition: 0.5s linear;
+}
+
+.rooms a:hover{
+    color: rgba(255,255,255,0.5);
+    transform: rotateX(0deg);
+    box-shadow: inset 0 0 1em gold, 3px 5px 5px teal;
+}
+
+
+.smaller{
+    width: 20vw;
+    height: 15vw;
+}
+
+
+.big-room{
+    margin: 0; 
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -999;
+    perspective: 1800px;
+}
+
+.floor{
+    background: lightgrey;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(50vh) rotateX(90deg);
+}
+.ceiling{
+    background: lightgrey;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-150vh) rotateX(90deg);
+}
+.backwall{
+    background: blue;
+    width: 100%;
+    height: 100vh;
+    transform: translateZ(-100vh) rotateX(180deg);
+}
+.leftwall{
+    background: blue;
+    width: 100vw;
+    height: 100vh;
+    transform: translateZ(-100px) rotateY(  90deg); 
+}
+
+.wallabel{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallabel p{
+    margin: 0;
+}
+
+
+.stickyfooter{
+    position: fixed;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+}
+
+ul{
+    list-style: square outside;
+    margin: 0;
+    font-size: 4vw;
+}
+
+
