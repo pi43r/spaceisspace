@@ -35,8 +35,12 @@
         </p>
     </div>
 
-    <audio loop autoplay>
+    <button id="playpausebtn" title="Play / Pause"></button>
+    <div id="audiovisualizer" class="pulse"></div>
+    <audio loop >
         <source src="audio/Copy_and_Space.mp3" type="audio/mp3" /> 
+        <source src="audio/Copy_and_Space.m4a" type="audio/mp4" /> 
+        <source src="audio/Copy_and_Space.ogg" type="audio/ogg" /> 
         No <code>audio</code> support :((
     </audio>
 
@@ -60,6 +64,7 @@
     }, 11000)
 </script>
 
+<script src="js/audioplayer.js"></script>
 <!-- <script src="js/filler.js"></script> -->
 <!-- <script src="js/background.js"></script> -->
 

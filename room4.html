@@ -35,7 +35,13 @@
         </p>
     </div>
 
-    <audio src="audio/mundraumaufnahme.mp3" loop autoplay>
+    <button id="playpausebtn" title="Play / Pause"></button>
+    <div id="audiovisualizer" class="pulse"></div>
+    <audio loop>
+        <source src="audio/mundraumaufnahme.mp3" type="audio/mp3" />
+        <source src="audio/mundraumaufnahme.m4a" type="audio/m4a" />
+        <source src="audio/mundraumaufnahme.ogg" type="audio/ogg" />
+
         No <code>audio</code> support :((
     </audio>
 
@@ -54,6 +60,7 @@
     </div>
 </body>
 
+<script src="js/audioplayer.js"></script>
 <!-- <script src="js/filler.js"></script> -->
 <!-- <script src="js/background.js"></script> -->
 

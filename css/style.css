@@ -21,6 +21,10 @@ h1{
     transform: scale(1, 3);
 }
 
+h1 a{
+    text-decoration: none;
+}
+
 h2{
     font-size: 3vw;
     transform: skew(-2deg, -6deg) scale(1,2);
@@ -29,7 +33,7 @@ h2{
 h2 a{
     transition: all 0.5s linear;
     color: rgba(255,255,255,0);
-    text-shadow: 1px 4px 6px #979797;
+    text-shadow: 1px 4px 0.3vw #979797;
     text-decoration: none;
 }
 h2 a:hover{
@@ -115,11 +119,10 @@ p{
     height: 100vh;
     transform: translateZ(-100vh) rotateX(180deg);
 }
-.leftwall{
+.rightwall{
     background: blue;
-    width: 100vw;
+    width: 20px;
     height: 100vh;
-    transform: translateZ(-100px) rotateY(  90deg); 
 }
 
 .wallabel{
@@ -147,9 +150,51 @@ ul{
     font-size: 4vw;
 }
 
-#playpausbutton{
-    width: 144px;
-    height: 144px;
+button {
+    margin-top: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
 }
+
+#playpausebtn{
+    position: fixed;
+    background-size: contain;
+    right: 2vw;
+    top: 0.5vh;
+    width: 70px;
+    height: 70px;
+    background: rgba(0,0,0, 0);
+    transform: rotateZ(20deg);
+}
+
+#audiovisualizer{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0, 0);
+    box-shadow: 
+        inset 0 0 10px teal,
+        inset 0 0 20px teal;
+    z-index: -9;
+}
+
+.pulse{
+    animation: pulse 1.33s infinite linear;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 
+            inset 0 0 10px teal,
+            inset 0 0 20px teal;
+    }
+    50% {
+        box-shadow: 
+            inset 0 0 10px gold,
+            inset 0 0 20px gold;
+    }
 
 

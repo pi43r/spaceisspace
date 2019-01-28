@@ -4,19 +4,23 @@ function initAudioPlayer(){
 
   // Set object references
 	playbtn = document.getElementById("playpausebtn");
+	visuals = document.getElementById("audiovisualizer");
   // Add Event Handling
 	playbtn.addEventListener("click",playPause);
 
+	playPause();
   // Functions
 	function playPause(){
 		if(audio.paused){
 		    audio.play();
 		    playbtn.style.background = "url(img/Pause.png) no-repeat";
-        playbtn.style.backgroundSize = "contain";
+				playbtn.style.backgroundSize = "contain";
+				visuals.classList.add("pulse");
       } else {
-		    audio.pause();
+				audio.pause();
 		    playbtn.style.background = "url(img/Play.png) no-repeat";
         playbtn.style.backgroundSize = "contain";
+				visuals.classList.remove("pulse");
 	    }
 	}
 }

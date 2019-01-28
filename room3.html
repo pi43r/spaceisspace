@@ -35,7 +35,13 @@
         </p>
     </div>
 
-    <audio src="audio/Hoffmann_und_Schellongowski-Letter_from_the_editor.mp3" loop autoplay>
+    <button id="playpausebtn" title="Play / Pause"></button>
+    <div id="audiovisualizer" class="pulse"></div>
+
+    <audio loop>
+        <source src="audio/Hoffmann_und_Schellongowski-Letter_from_the_editor.mp3" type="audio/mp3" />
+        <source src="audio/Hoffmann_und_Schellongowski-Letter_from_the_editor.m4a" type="audio/mp4" />
+        <source src="audio/Hoffmann_und_Schellongowski-Letter_from_the_editor.ogg" type="audio/ogg" />
         No <code>audio</code> support :((
     </audio>
 
@@ -54,6 +60,7 @@
     </div>
 </body>
 
+<script src="js/audioplayer.js"></script>
 <!-- <script src="js/filler.js"></script> -->
 <!-- <script src="js/background.js"></script> -->
 
